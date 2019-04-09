@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './NavigationItems.module.css';
+import classes from './NavigationItem.module.css';
 
 const NavigationItem = (props) => (
   <li className={classes.NavigationItem}>
