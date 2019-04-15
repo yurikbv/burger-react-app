@@ -8,7 +8,6 @@ export const addIngredient = (name) => {
   }
 };
 
-
 export const removeIngredient = (name) => {
   return {
     type: actionTypes.REMOVE_INGREDIENT,
@@ -26,7 +25,6 @@ export const setIngredients = (ingredients) => {
 export const fetchIngredientsFailed = () => {
   return {
     type: actionTypes.FETCH_INGREDIENTS_FAILED,
-
   }
 };
 
@@ -37,7 +35,7 @@ export const initIngredients = () => {
         dispatch(setIngredients(res.data));
       })
       .catch(error => {
-        fetch(fetchIngredientsFailed());
+        dispatch(fetchIngredientsFailed());
       })
   };
 };
